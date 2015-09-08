@@ -1,0 +1,56 @@
+<!DOCUMENT html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Cat Clicker 2</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="list-view"></div>
+
+<div class="display-area"></div>
+
+<div class="admin">
+	<button class="admin-btn">Admin</button><br>
+	<form class="admin-form">
+		<label for="name">Name</label>
+			<input type="text" id="name"><br>
+				<label for="imageURL">Image URL</label>
+			<input type="text" id="imageURL"><br>
+				<label for="clicks">Clicks</label>
+			<input type="text" id="clicks"><br>
+			<button class="save-btn">Save</button>
+			<button class="cancel-btn">Cancel</button>
+	</form>
+</div>
+
+<!-- list item partial -->
+<script type="text/template" data-template="cat-link">
+	<li class="cat-link" data-id="{{id}}">
+		<a href="#">{{name}}</a>
+	</li>
+</script>
+
+<!-- cat card partial -->
+<script type="text/template" data-template="display-area">
+	<div class="cat" 
+		data-id="{{id}}" 
+		data-name="{{name}}"
+		data-clicks="{{clicks}}">
+			<h2 class="name">{{name}}</h2>
+			<img src={{pic}}>
+			<p class="clicks">{{clicks}}</p>
+	</div>
+</script>
+
+
+
+
+	<script src="js/libs/jQuery.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
